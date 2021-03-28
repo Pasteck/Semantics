@@ -1,0 +1,16 @@
+.mainDisplayer{
+    overflow-y: scroll;
+    height:80%;
+    padding:5px;
+    margin:5px;
+    border-radius: 20px;
+}
+
+.mainDisplayer::-webkit-scrollbar {
+    width: 5px;            
+}
+
+.mainDisplayer::-webkit-scrollbar-thumb {
+    background-color: #ffc400;
+    border-radius: 20px;     
+}

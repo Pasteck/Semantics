@@ -1,0 +1,14 @@
+.mainStation{
+
+    background-color: #f1ea7a;
+    padding:10px;
+    border-radius: 10px;
+    margin: 10px;
+    height:180px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor:pointer;
+}
+
+.mainStation:hover{
+    background-color: #e9ba54;
+}

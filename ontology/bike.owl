@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2021/bike"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2021/bike">
+    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/2021/bike"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#BikeAvailableStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BikeAvoidStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BikeStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StandFreeStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StandFullStation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AvailableBikeStands"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AvailableBikes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Lastupdate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Long"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Name"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#BikeAvailableStation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BikeStation"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#AvailableBikes"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BikeAvoidStation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BikeStation"/>
+            <DataHasValue>
+                <DataProperty IRI="#AvailableBikes"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StandFreeStation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BikeStation"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#AvailableBikeStands"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StandFullStation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BikeStation"/>
+            <DataHasValue>
+                <DataProperty IRI="#AvailableBikeStands"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AvailableBikeStands"/>
+        <Class IRI="#BikeStation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AvailableBikes"/>
+        <Class IRI="#BikeStation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Lastupdate"/>
+        <Class IRI="#BikeStation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Lat"/>
+        <Class IRI="#BikeStation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Long"/>
+        <Class IRI="#BikeStation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Name"/>
+        <Class IRI="#BikeStation"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AvailableBikeStands"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#AvailableBikes"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Lastupdate"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Lat"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Long"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

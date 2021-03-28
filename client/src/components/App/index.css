@@ -1,0 +1,19 @@
+.mainApp {
+    display: flex;
+    height:100%;
+    overflow: hidden;
+}
+
+.left {
+    width: 30%;
+    background-color: white;
+
+}
+
+
+.right {
+    width: 70%;
+    background-color: white;
+
+
+}  
